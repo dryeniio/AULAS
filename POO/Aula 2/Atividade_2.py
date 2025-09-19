@@ -48,8 +48,18 @@ menu = 0
 print(f'Para começar, informe o carro: ')
 car1 = Carro(input('Insira o modelo: '), input('Insira o ano de fabricação: '))
 
-
-
+def consultar_estado(estado):
+    if estado > 0:
+        return 'Ligado'
+    else:
+        return 'Desligado'
+def consultar_marcha(velocidade):
+    if velocidade == 0:
+        return 'Parado'
+    elif velocidade > 0:
+        return 'Andando'
+    elif velocidade < 0:
+        return 'Ré'
 
 
 while menu == 0:
@@ -67,9 +77,9 @@ while menu == 0:
     
     print(f'Estado do veículo: ')
     print('Modelo: {}, Ano: {}'.format(car1.modelo,car1.ano))
-    print('Velocidade: {} Km/h'.format(car1.velocidade))
-    print('Estado do farol: {} || (1) Ligado | (0) Desligado'.format(car1.farol))
-    print('Estado do limpador: {} || (1) Ligado | (0) Desligado'.format(car1.limpador))
+    print('Velocidade: {} Km/h | ({})'.format(car1.velocidade, consultar_marcha(car1.velocidade)))
+    print('Estado do farol: {} ({})'.format(car1.farol, consultar_estado(car1.farol)))
+    print('Estado do limpador: {} ({})'.format(car1.limpador, consultar_estado(car1.limpador)))
     
     print(f'------------------------------------')
     option = input('Digite a opção: ')
@@ -87,6 +97,6 @@ while menu == 0:
     elif option == '4':
         car1.alternarLimpador()
     else:
-        print(f'Código incorreto, tente novamente..')
+        print(f'Código incorreto, tente novamente...')
     
     print(f'------------------------------------')
