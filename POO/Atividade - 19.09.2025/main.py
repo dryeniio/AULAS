@@ -1,14 +1,16 @@
 # 2NB - 01851994 - Enio Enrique
-from aviao_class import Aviao
+from aviao import Aviao
 
-Voo1 = Aviao()
+Aviao1 = Aviao()
+Aviao1.criar_aviao('Embraer', 'E295', 'AVALON', 'PS-KSB')
 
 print('------------------------------------------------')
-Voo1.alterar_matricula('PS-AEK')
+Aviao1.alterar_operador('Azul Linhas Aereas')
+print(f'Operador alterado para {Aviao1.operador}')
 print('------------------------------------------------')
-Voo1.alterar_rota('REC - GRU')
+Aviao1.alterar_rota('REC - GRU')
+print(f'Rota alterada para: {Aviao1.rota}')
 print('------------------------------------------------')
 print('------------------------------------------------')
-
-print(f'Avião: {Voo1.modelo} | Matrícula: {Voo1.matricula} | Rota: {Voo1.rota} | Operador: {Voo1.operador}')
+Aviao1.exibir_dados()
 print('------------------------------------------------')
