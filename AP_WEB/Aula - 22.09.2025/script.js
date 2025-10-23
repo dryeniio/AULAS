@@ -2,9 +2,9 @@ function Calcular(){
     let num1 = parseInt(document.querySelector("#num1").value)
     let num2 = parseInt(document.querySelector("#num2").value)
     let num3 = parseInt(document.querySelector("#num2").value)
-let soma = num1 + num2 + num3
-document.querySelector('#descricao').innerHTML = 'A soma foi:'
-document.querySelector("#result").innerHTML = `${soma}`
+    let soma = num1 + num2 + num3
+    document.querySelector('#descricao').innerHTML = 'A soma foi:'
+    document.querySelector("#result").innerHTML = `${soma}`
 }
 
 function Calcular_nota(){
